@@ -1,0 +1,13 @@
+name: nps_survey_dashboard
+title: NPS Survey Dashboard
+username: joel_gastelaars
+account: joel_gastelaars
+server: rstudio-connect.lmn.nl
+hostUrl: https://rstudio-connect.lmn.nl/__api__
+appId: 46
+bundleId: 101
+url: https://rstudio-connect.lmn.nl/content/ab63e26c-1622-4269-af8f-7b13c6ba651e/
+when: 1631868804.5531
+lastSyncTime: 1631868804.55311
+asMultiple: FALSE
+asStatic: FALSE

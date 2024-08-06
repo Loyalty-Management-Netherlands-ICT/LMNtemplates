@@ -1,0 +1,49 @@
+---
+title: "template Dashboard"
+author: "DAI Airmiles"
+date: "`r Sys.time()`"
+output: html_document
+---
+
+```{r setup, results='hide', echo=FALSE, message=FALSE, error=FALSE, warning=FALSE}
+print(getwd())
+source("../code/functions.R")
+options(scipen = 999)
+packages(c('flexdashboard', 'shiny', 'tidyverse', 'tidyr', 'tdplyr', 'teradatasql', 'dbplyr', 'dplyr', 
+           'ggplot2', 'plotly', 'data.table', 'lubridate'))
+
+# Make connection with Teradata using DBI/odbc
+con <- DBI::dbConnect(odbc::odbc(),
+                      Driver  = Sys.getenv("td_driver"),
+                      DBCName = Sys.getenv("td_prod1"),
+                      UID     = Sys.getenv("td_user"),
+                      PWD     = Sys.getenv("td_prod_pw"),
+                      UseXviews = 1,
+                      SessionMode = "ANSI",
+                      bigint = c("integer"))
+
+```
+
+## Summary & Plots NPS questions ####
+
+#### plot a
+```{r, echo=F}
+
+```
+
+
+#### plot b
+```{r, echo=F}
+
+```
+
+#### plot c
+```{r, echo=F}
+
+```
+
+#### plot d
+```{r, echo=F, include=F}
+DBI::dbDisconnect(con)
+```
+
