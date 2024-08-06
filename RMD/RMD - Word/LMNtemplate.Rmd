@@ -3,7 +3,8 @@ title: "Document Title"
 author: "LMN team data"
 date: "2024-08-06"
 output:
-  word_document: default
+  word_document:
+    reference_docx: LMNtemplate.docx
 ---
 
 ```{r setup, include=FALSE}
