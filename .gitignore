@@ -52,6 +52,7 @@ code/00-input/*
 front-end/rsconnect/*
 
 # Don't push html output to git
+.html
 
 # Don't push local log files (from CRONjob) to git
 *.log
