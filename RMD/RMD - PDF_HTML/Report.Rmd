@@ -48,10 +48,10 @@ options(knitr.table.format = function() {if (knitr::is_latex_output()) 'latex' e
 ```{r source codescripts, echo=FALSE, error=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 # source embedded in timer to track reducement of rendertime
 start1 <- Sys.time(); sys.source("Settings.R",            envir = knitr::knit_global()); end1 <- Sys.time() - start1
-start2 <- Sys.time(); sys.source("LMNColors.R",           envir = knitr::knit_global()); end2 <- Sys.time() - start2
-start3 <- Sys.time(); sys.source("FunctionPieDonutLMN.R", envir = knitr::knit_global()); end3 <- Sys.time() - start3
-start4 <- Sys.time(); sys.source("GetData.R",             envir = knitr::knit_global()); end4 <- Sys.time() - start4
-start5 <- Sys.time(); sys.source("PrepData.R",            envir = knitr::knit_global()); end5 <- Sys.time() - start5
+#start2 <- Sys.time(); sys.source("LMNColors.R",           envir = knitr::knit_global()); end2 <- Sys.time() - start2
+#start3 <- Sys.time(); sys.source("FunctionPieDonutLMN.R", envir = knitr::knit_global()); end3 <- Sys.time() - start3
+#start4 <- Sys.time(); sys.source("GetData.R",             envir = knitr::knit_global()); end4 <- Sys.time() - start4
+#start5 <- Sys.time(); sys.source("PrepData.R",            envir = knitr::knit_global()); end5 <- Sys.time() - start5
 ```
 
 \newpage
