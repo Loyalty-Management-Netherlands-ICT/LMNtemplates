@@ -1,0 +1,78 @@
+---
+title: "Document title"
+subtitle: "Document subtitle"
+author: "Loyalty Management Netherlands"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    includes:
+      in_header: header.html
+    theme: cerulean
+    number_sections: yes
+    toc: yes
+    toc_float:
+      collapsed: no
+      smooth_scroll: no
+    fig_caption: no
+    fig_height: 5
+    keep_md: true
+  pdf_document: 
+    latex_engine: pdflatex
+    toc: yes
+    number_sections: yes
+    fig_caption: no
+    fig_height: 4
+    keep_tex: yes
+    citation_package: natbib
+    includes:
+      in_header: header.tex
+fontsize: 10pt
+linkcolor: blue
+urlcolor: red
+citecolor: cyan
+link_citations: yes
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+<!-- ldh: This line is how you make comments in markdown, won't show in the document -->
+
+\
+
+```{r chunk setup, echo=FALSE, error=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, error=FALSE, message=FALSE)
+options(knitr.table.format = function() {if (knitr::is_latex_output()) 'latex' else 'pandoc'})
+```
+
+```{r source codescripts, echo=FALSE, error=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+# source embedded in timer to track reducement of rendertime
+start1 <- Sys.time(); sys.source("Settings.R",            envir = knitr::knit_global()); end1 <- Sys.time() - start1
+start2 <- Sys.time(); sys.source("LMNColors.R",           envir = knitr::knit_global()); end2 <- Sys.time() - start2
+start3 <- Sys.time(); sys.source("FunctionPieDonutLMN.R", envir = knitr::knit_global()); end3 <- Sys.time() - start3
+start4 <- Sys.time(); sys.source("GetData.R",             envir = knitr::knit_global()); end4 <- Sys.time() - start4
+start5 <- Sys.time(); sys.source("PrepData.R",            envir = knitr::knit_global()); end5 <- Sys.time() - start5
+```
+
+\newpage
+
+# Management Summary
+
+blabla
+\newpage
+
+# Introduction
+
+xxx
+
+xx
+
+# Chapter 1
+
+# Chapter 2
+
+## Subchapter
+
+# Chapter 3
+
+# Conclusions and Recommendations
